@@ -1,4 +1,5 @@
-import './index.css'
+import './style.css';
+
 const Header = () => {
     return (
         <nav>

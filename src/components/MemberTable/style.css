@@ -18,3 +18,11 @@ tr:nth-child(even) {
 .member-container {
     overflow-x: auto;
 }
+
+.link {
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

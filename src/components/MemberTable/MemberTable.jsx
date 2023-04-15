@@ -26,7 +26,7 @@ const MemberTable = (props) => {
                                 <td>{item.email}</td>
                                 <td>{item.first_name}</td>
                                 <td>{item.last_name}</td>
-                                <td className={!teamId && 'link'} onClick={!teamId ? () => navigate(`/team-detail/${item.team.id}`) : undefined}>{item?.team?.name}</td>
+                                <td className={!teamId && 'link'} onClick={!teamId ? () => navigate(`/team-details/${item.team.id}`) : undefined}>{item?.team?.name}</td>
 
                             </tr>
                         ))

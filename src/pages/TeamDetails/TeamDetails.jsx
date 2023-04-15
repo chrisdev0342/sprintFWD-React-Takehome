@@ -11,7 +11,7 @@ const TeamDetails = () => {
 
     return (
         <div className={styles.teamDetailContainer}>
-            <h4 className={`pointer`} onClick={() => navigate('/member')}>&lt; Back</h4>
+            <h4 className={`pointer`} onClick={() => navigate('/members')}>&lt; Back</h4>
             <h3>Team Detail:</h3>
             <p>ID: {teamDetail.id}</p>
             <p>Name: {teamDetail.name}</p>

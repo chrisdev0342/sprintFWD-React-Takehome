@@ -10,14 +10,18 @@ const TeamDetails = () => {
     const teamDetail = data.teams.find(item => item.id == id);
 
     return (
-        <div className={styles.teamDetailContainer}>
+        <>
             <h4 className={`pointer`} onClick={() => navigate('/members')}>&lt; Back</h4>
-            <h3>Team Detail:</h3>
-            <p>ID: {teamDetail.id}</p>
-            <p>Name: {teamDetail.name}</p>
-            <p>Total Member: {teamDetail.member_count}</p>
-            <MemberTable teamId={id} />
-        </div>
+            <div className={styles.teamDetailContainer}>
+                <div className={styles.teamDetailTop}>
+                    <h3>Team Detail</h3>
+                    <p>ID: {teamDetail.id}</p>
+                    <p>Name: {teamDetail.name}</p>
+                    <p>Total Member: {teamDetail.member_count}</p>
+                </div>
+                <MemberTable teamId={id} />
+            </div>
+        </>
     )
 }
 export default TeamDetails;

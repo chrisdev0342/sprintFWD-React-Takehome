@@ -47,16 +47,19 @@ const TodoItem = (props) => {
                     </button>
                 </div>
             </div>
-            <input
-                type="text"
-                style={editMode}
-                className={styles.textInput}
-                value={title}
-                onChange={(e) => {
-                    setUpdate(e.target.value, id);
-                }}
-                onKeyDown={handleUpdatedDone}
-            />
+            <div className={styles.updateInputContainer}>
+                <input
+                    type="text"
+                    style={editMode}
+                    className={styles.textInput}
+                    value={title}
+                    onChange={(e) => {
+                        setUpdate(e.target.value, id);
+                    }}
+                    onKeyDown={handleUpdatedDone}
+                />
+                <button style={editMode} onClick={() => setEditing(false)}>update</button>
+            </div>
         </li>
     );
 };

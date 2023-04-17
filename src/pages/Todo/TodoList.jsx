@@ -7,12 +7,13 @@ const TodoList = (props) => {
     const { deleteTodoProps, setUpdate } = props;
     return (
         <ul>
-            {todos.map((todo) => (
+            {todos.map((todo, index) => (
                 <TodoItem
                     key={todo.id}
                     todo={todo}
                     deleteTodoProps={deleteTodoProps}
                     setUpdate={setUpdate}
+                    index={index}
                 />
             ))}
         </ul>

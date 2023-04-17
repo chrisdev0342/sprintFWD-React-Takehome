@@ -5,7 +5,7 @@ import styles from './Todo.module.css';
 const TodoItem = (props) => {
     const [editing, setEditing] = useState(false);
 
-    const { todo } = props;
+    const { todo, index } = props;
     const { completed, id, title } = todo;
     const { deleteTodoProps, setUpdate } = props;
 
@@ -36,7 +36,8 @@ const TodoItem = (props) => {
     return (
         <li className={styles.item}>
             <div className={styles.itemList} style={viewMode}>
-                <span style={completed ? completedStyle : null}>{title}</span>
+
+                <span style={completed ? completedStyle : null}> {index + 1}. {title}</span>
                 <div>
                     <button type="button" onClick={() => deleteTodoProps(id)}>
                         delete
@@ -62,6 +63,7 @@ const TodoItem = (props) => {
 
 TodoItem.propTypes = {
     todo: PropTypes.isRequired,
+    index: PropTypes.isRequired
 };
 
 TodoItem.propTypes = {
